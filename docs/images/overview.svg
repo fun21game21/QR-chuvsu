@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="500" viewBox="0 0 1280 500" role="img" aria-labelledby="title desc">
+  <title id="title">QR-CHUVSU v2</title>
+  <desc id="desc">Отметка студентов по QR-коду: создание занятия, проверка присутствия и журнал посещаемости.</desc>
+  <rect width="1280" height="500" rx="24" fill="#0f2038"/>
+  <circle cx="1160" cy="60" r="220" fill="#173658"/>
+  <circle cx="1220" cy="30" r="130" fill="#1e4367"/>
+  <g font-family="Arial, sans-serif">
+    <text x="64" y="78" fill="#79b5fc" font-size="17" letter-spacing="4">PYTHON BACKEND · OPEN SOURCE</text>
+    <text x="64" y="159" fill="#ffffff" font-size="64" font-weight="700">QR-CHUVSU <tspan fill="#79b5fc">v2</tspan></text>
+    <text x="64" y="212" fill="#d0dfef" font-size="27">Система отметки студентов по QR-коду</text>
+    <g transform="translate(64 263)">
+      <rect width="352" height="121" rx="16" fill="#203a56"/>
+      <text x="24" y="37" fill="#79b5fc" font-size="15">01 / ПРЕПОДАВАТЕЛЬ</text>
+      <text x="24" y="70" fill="#ffffff" font-size="23" font-weight="700">Создаёт занятие</text>
+      <text x="24" y="99" fill="#d0dfef" font-size="17">Корпус · QR · шестизначный код</text>
+    </g>
+    <g transform="translate(464 263)">
+      <rect width="352" height="121" rx="16" fill="#203a56"/>
+      <text x="24" y="37" fill="#79b5fc" font-size="15">02 / СТУДЕНТ</text>
+      <text x="24" y="70" fill="#ffffff" font-size="23" font-weight="700">Отмечается с телефона</text>
+      <text x="24" y="99" fill="#d0dfef" font-size="17">ФИО · группа · геолокация</text>
+    </g>
+    <g transform="translate(864 263)">
+      <rect width="352" height="121" rx="16" fill="#203a56"/>
+      <text x="24" y="37" fill="#79b5fc" font-size="15">03 / РЕЗУЛЬТАТ</text>
+      <text x="24" y="70" fill="#ffffff" font-size="23" font-weight="700">Журнал посещаемости</text>
+      <text x="24" y="99" fill="#d0dfef" font-size="17">Отметки · причины отказов · Excel</text>
+    </g>
+    <text x="64" y="448" fill="#a7bdd5" font-size="20">FastAPI  /  PostgreSQL  /  asyncpg  /  Docker  /  Nginx</text>
+  </g>
+</svg>

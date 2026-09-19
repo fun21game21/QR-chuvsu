@@ -1,5 +1,15 @@
 # QR-CHUVSU v2
 
+![QR-CHUVSU v2 — создание занятия, отметка студента, журнал](docs/images/overview.svg)
+
+[![Tests](https://github.com/fun21game21/QR-chuvsu/actions/workflows/ci.yml/badge.svg)](https://github.com/fun21game21/QR-chuvsu/actions/workflows/ci.yml)
+![Python 3.12+](https://img.shields.io/badge/Python-3.12%2B-3776AB)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688)
+![PostgreSQL 16](https://img.shields.io/badge/PostgreSQL-16-4169E1)
+[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
+[Быстрый запуск](#quick-start) · [Возможности](#возможности) · [HTTPS для телефона](docs/HTTPS.md) · [Корпуса ЧГУ](docs/CAMPUSES.md) · [Проверка работы](docs/TEST_REPORT.md)
+
 Система автоматизированной отметки студентов по QR-коду. Преподаватель создаёт занятие, показывает QR-код, получает журнал и скачивает Excel. Студент открывает ссылку с телефона, вводит ФИО и группу и разрешает геолокацию. Отдельное приложение не нужно.
 
 Это переработанная версия учебного проекта QR-CHUVSU, представленного в материалах защиты Максима Колсанова и Дмитрия Стенейкина. Концепция сохранена, backend и хранение данных реализованы заново на FastAPI и PostgreSQL. Исходные презентация и материалы защиты в репозиторий не включены.
@@ -8,11 +18,11 @@
 
 1. Установите и **запустите** [Docker Desktop](https://www.docker.com/products/docker-desktop/). На Linux можно использовать Docker Engine с Compose plugin.
 2. Установите Git. Скопируйте URL этого репозитория через зелёную кнопку **Code → HTTPS** на GitHub.
-3. Откройте терминал и выполните, заменив `<OWNER>` владельцем опубликованного репозитория:
+3. Откройте терминал и выполните:
 
    ```bash
-   git clone https://github.com/<OWNER>/qr-chuvsu-v2.git
-   cd qr-chuvsu-v2
+   git clone https://github.com/fun21game21/QR-chuvsu.git
+   cd QR-chuvsu
    docker compose up --build
    ```
 
@@ -273,20 +283,13 @@ docker compose exec postgres psql -U qr -d qr_chuvsu -c "DELETE FROM sessions WH
 
 Связанные отметки удаляются через `ON DELETE CASCADE`. Не публикуйте реальные журналы, `.env`, сертификаты и резервные копии.
 
-## Публикация на GitHub
+## Участие в проекте
 
-Создайте пустой репозиторий `qr-chuvsu-v2` в своём аккаунте. В папке проекта выполните:
+Нашли ошибку или хотите предложить улучшение? Создайте [Issue](https://github.com/fun21game21/QR-chuvsu/issues). Укажите шаги воспроизведения, ожидаемый результат и версию Docker. Для изменений создайте fork, внесите правки и откройте pull request. Перед отправкой выполните команды из раздела «Автоматическая проверка».
 
-```bash
-git init
-git add .
-git commit -m "Initial QR-CHUVSU v2 implementation"
-git branch -M main
-git remote add origin https://github.com/<OWNER>/qr-chuvsu-v2.git
-git push -u origin main
-```
+## Авторы и лицензия
 
-Если репозиторий или remote уже существуют, используйте их вместо повторной инициализации. Замените `<OWNER>` в инструкции Quick Start на реального владельца. Проект подготовлен к публикации; автоматического создания репозитория и отправки исходников во внешний аккаунт нет.
+Исходный учебный проект QR-CHUVSU представлен в материалах защиты Максима Колсанова и Дмитрия Стенейкина. Версию v2 развивает [fun21game21](https://github.com/fun21game21). В интерфейсе сохранена подпись «Доработан Максимкой».
 
 Лицензия новой реализации — [MIT](LICENSE).
 
