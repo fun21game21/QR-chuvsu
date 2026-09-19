@@ -1,4 +1,4 @@
-# Отчёт проверки QR-CHUVSU v2
+# Отчёт проверки QR-chuvsu
 
 Дата обновлённой проверки: 19 сентября 2026 года. Проверка выполнена локально на macOS ARM64 с Docker Desktop. Runtime приложения — Linux-контейнер Python 3.12.14, PostgreSQL 16, Nginx 1.28. Docker Engine 29.7.2, Compose v5.4.0.
 
@@ -86,7 +86,7 @@ docker compose --profile test run --rm \
 
 ## Проверка после публикации в GitHub
 
-19 сентября 2026 года выполнен [workflow Test QR-CHUVSU v2](https://github.com/fun21game21/QR-chuvsu/actions/runs/35459604514) для коммита `0b76fabe8312692ddd39d2c201bbf89bb3d512ac` на GitHub-hosted runner Ubuntu.
+19 сентября 2026 года выполнен [workflow Test QR-chuvsu](https://github.com/fun21game21/QR-chuvsu/actions/runs/35459604514) для коммита `0b76fabe8312692ddd39d2c201bbf89bb3d512ac` на GitHub-hosted runner Ubuntu.
 
 - Чистая сборка и запуск `docker compose up --build -d --wait`: успешно.
 - Сборка тестового образа с загрузкой зависимостей: успешно; локальный сетевой сбой PyPI на этом runner не повторился.
