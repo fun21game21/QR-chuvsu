@@ -81,4 +81,17 @@ docker compose --profile test run --rm \
 - Файл Excel успешно открыт и проверен библиотекой openpyxl. Дополнительная проверка через интерфейс Microsoft Excel была прервана пользователем; открытие в GUI не заявляется завершённым.
 - Внешний HTTPS-домен, DNS и сертификат не настраивались по указанию заказчика. Подготовлены инструкция и необязательная конфигурация; публичное TLS-развёртывание не заявляется проверенным.
 - Pytest выводит одно предупреждение DeprecationWarning из Starlette TestClient о старом псевдониме AnyIO BlockingPortal. Это предупреждение стороннего тестового инструмента, не ошибка приложения; все 64 теста завершаются успешно.
-- Workflow GitHub Actions добавлен; удалённый запуск на GitHub не проводился, поскольку репозиторий не публиковался.
+- После публикации выполнен [успешный запуск GitHub Actions](https://github.com/fun21game21/QR-chuvsu/actions/runs/35459604514): чистая сборка Docker, PostgreSQL, 64 теста и линтер. См. раздел ниже.
+
+
+## Проверка после публикации в GitHub
+
+19 сентября 2026 года выполнен [workflow Test QR-CHUVSU v2](https://github.com/fun21game21/QR-chuvsu/actions/runs/35459604514) для коммита `0b76fabe8312692ddd39d2c201bbf89bb3d512ac` на GitHub-hosted runner Ubuntu.
+
+- Чистая сборка и запуск `docker compose up --build -d --wait`: успешно.
+- Сборка тестового образа с загрузкой зависимостей: успешно; локальный сетевой сбой PyPI на этом runner не повторился.
+- Полный набор тестов: **64 passed, 1 warning in 3.77s**.
+- Smoke-тест через Nginx → FastAPI → PostgreSQL: успешно.
+- `ruff check app tests`: **All checks passed!**.
+
+Одно предупреждение DeprecationWarning относится к стороннему тестовому инструменту Starlette/AnyIO и не мешает выполнению тестов.
