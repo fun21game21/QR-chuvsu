@@ -1,0 +1,104 @@
+name: qr-chuvsu-v2
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: qr_chuvsu
+      POSTGRES_USER: qr
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-qr_local_demo}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: [CMD-SHELL, 'pg_isready -U qr -d qr_chuvsu']
+      interval: 3s
+      timeout: 3s
+      retries: 20
+    restart: unless-stopped
+    networks:
+      appnet:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+      target: runtime
+    environment:
+      DATABASE_URL: postgresql://qr:${POSTGRES_PASSWORD:-qr_local_demo}@postgres:5432/qr_chuvsu
+      PUBLIC_BASE_URL: ${PUBLIC_BASE_URL:-http://localhost}
+      COOKIE_SECURE: ${COOKIE_SECURE:-false}
+      APP_SECRET: ${APP_SECRET:-}
+      TIMEZONE: ${TIMEZONE:-Europe/Moscow}
+      IP_RATE_LIMIT: ${IP_RATE_LIMIT:-120}
+      FORWARDED_ALLOW_IPS: 172.30.92.3
+    volumes:
+      - app_data:/data
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=3)"]
+      interval: 5s
+      timeout: 4s
+      retries: 20
+    restart: unless-stopped
+    networks:
+      appnet:
+  nginx:
+    image: nginx:1.28-alpine
+    ports:
+      - '${HTTP_PORT:-80}:80'
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      backend:
+        condition: service_healthy
+    healthcheck:
+      test: [CMD, wget, -q, -O, /dev/null, 'http://127.0.0.1/health']
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    restart: unless-stopped
+    networks:
+      appnet:
+        ipv4_address: 172.30.92.3
+  postgres-test:
+    image: postgres:16-alpine
+    profiles: [test]
+    environment:
+      POSTGRES_DB: qr_chuvsu_test
+      POSTGRES_USER: qr
+      POSTGRES_PASSWORD: test_only
+    tmpfs:
+      - /var/lib/postgresql/data
+    healthcheck:
+      test: [CMD-SHELL, 'pg_isready -U qr -d qr_chuvsu_test']
+      interval: 2s
+      timeout: 3s
+      retries: 20
+    networks:
+      appnet:
+  tests:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+      target: test
+    profiles: [test]
+    environment:
+      DATABASE_URL: postgresql://qr:test_only@postgres-test:5432/qr_chuvsu_test
+      APP_SECRET: test-secret-only-not-for-deployment-123456789
+      LIVE_BASE_URL: http://nginx
+    depends_on:
+      postgres-test:
+        condition: service_healthy
+      nginx:
+        condition: service_healthy
+    networks:
+      appnet:
+volumes:
+  postgres_data:
+  app_data:
+networks:
+  appnet:
+    ipam:
+      config:
+        - subnet: 172.30.92.0/24
+          ip_range: 172.30.92.128/25

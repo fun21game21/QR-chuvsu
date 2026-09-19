@@ -1,0 +1,8 @@
+# Optional override. Follow docs/HTTPS.md before enabling this file.
+services:
+  nginx:
+    ports:
+      - '443:443'
+    volumes:
+      - ./nginx/https.conf:/etc/nginx/nginx.conf:ro
+      - ./.certificates:/etc/letsencrypt:ro

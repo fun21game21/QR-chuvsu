@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="csrf-token" content="{{ csrf }}">
+  <meta name="theme-color" content="#123a5b">
+  <title>{% block title %}QR-CHUVSU v2{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
+  <script src="{{ url_for('static', path='app.js') }}" defer></script>
+</head>
+<body>
+<header class="topbar"><a class="brand" href="/">▦ QR-CHUVSU <span>v2</span></a></header>
+<main>{% block content %}{% endblock %}</main>
+<footer><span>QR-CHUVSU v2 · Доработан Максимкой</span><a href="/privacy">Обработка данных</a></footer>
+<noscript><p class="notice">Для отметки включите JavaScript. Если это невозможно, обратитесь к преподавателю.</p></noscript>
+</body>
+</html>

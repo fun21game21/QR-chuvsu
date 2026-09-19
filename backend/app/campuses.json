@@ -1,0 +1,212 @@
+[
+  {
+    "id": "chuvsu-a",
+    "name": "Корпус А",
+    "address": "Московский проспект, 15А",
+    "latitude": 56.1447547,
+    "longitude": 47.2239012,
+    "google_maps_url": "https://www.google.com/maps?cid=1564267313625989063",
+    "source_url": "https://www.google.com/maps?cid=1564267313625989063",
+    "note": ""
+  },
+  {
+    "id": "chuvsu-b",
+    "name": "Корпус Б",
+    "address": "Московский проспект, 15Б",
+    "latitude": 56.1448055,
+    "longitude": 47.2247533,
+    "google_maps_url": "https://www.google.com/maps?cid=17081583137998683117",
+    "source_url": "https://www.google.com/maps?cid=17081583137998683117",
+    "note": ""
+  },
+  {
+    "id": "chuvsu-v",
+    "name": "Корпус В",
+    "address": "Московский проспект, 15В",
+    "latitude": 56.1447328,
+    "longitude": 47.2241249,
+    "google_maps_url": "https://www.google.com/maps?cid=9968465744450046166",
+    "source_url": "https://www.google.com/maps?cid=9968465744450046166",
+    "note": ""
+  },
+  {
+    "id": "chuvsu-g",
+    "name": "Корпус Г",
+    "address": "Московский проспект, 15",
+    "latitude": 56.1457245,
+    "longitude": 47.2243805,
+    "google_maps_url": "https://www.google.com/maps?cid=6139880325086627653",
+    "source_url": "https://www.google.com/maps?cid=6139880325086627653",
+    "note": "Общая точка главного здания Г/И/К."
+  },
+  {
+    "id": "chuvsu-d",
+    "name": "Корпус Д",
+    "address": "Московский проспект, 15Д",
+    "latitude": 56.1447621,
+    "longitude": 47.2254026,
+    "google_maps_url": "https://www.google.com/maps?cid=10804470023486739144",
+    "source_url": "https://www.google.com/maps?cid=10804470023486739144",
+    "note": ""
+  },
+  {
+    "id": "chuvsu-e",
+    "name": "Корпус Е",
+    "address": "Московский проспект, 29",
+    "latitude": 56.1437093,
+    "longitude": 47.2098824,
+    "google_maps_url": "https://www.google.com/maps?cid=3581133987613420738",
+    "source_url": "https://www.google.com/maps?cid=3581133987613420738",
+    "note": ""
+  },
+  {
+    "id": "chuvsu-zh",
+    "name": "Корпус Ж",
+    "address": "Московский проспект, 15Ж",
+    "latitude": 56.1453247,
+    "longitude": 47.2272224,
+    "google_maps_url": "https://www.google.com/maps?cid=9071544994854470308",
+    "source_url": "https://www.google.com/maps?cid=9071544994854470308",
+    "note": ""
+  },
+  {
+    "id": "chuvsu-z",
+    "name": "Корпус З",
+    "address": "Московский проспект, 15З",
+    "latitude": 56.143706,
+    "longitude": 47.224235,
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=56.143706,47.224235",
+    "source_url": "https://2gis.ru/cheboksary/firm/7459615163964440",
+    "note": "Координаты карточки 2ГИС; отдельная карточка Google Maps не найдена."
+  },
+  {
+    "id": "chuvsu-i",
+    "name": "Корпус И",
+    "address": "Московский проспект, 15",
+    "latitude": 56.1457245,
+    "longitude": 47.2243805,
+    "google_maps_url": "https://www.google.com/maps?cid=6139880325086627653",
+    "source_url": "https://www.google.com/maps?cid=6139880325086627653",
+    "note": "Левое крыло главного здания; общая точка Г/И/К."
+  },
+  {
+    "id": "chuvsu-k",
+    "name": "Корпус К",
+    "address": "Московский проспект, 15",
+    "latitude": 56.1457245,
+    "longitude": 47.2243805,
+    "google_maps_url": "https://www.google.com/maps?cid=6139880325086627653",
+    "source_url": "https://www.google.com/maps?cid=6139880325086627653",
+    "note": "Правое крыло главного здания; общая точка Г/И/К."
+  },
+  {
+    "id": "chuvsu-l",
+    "name": "Корпус Л",
+    "address": "улица Пирогова, 5",
+    "latitude": 56.1394415,
+    "longitude": 47.1991811,
+    "google_maps_url": "https://www.google.com/maps?cid=7620660994930659316",
+    "source_url": "https://www.google.com/maps?cid=7620660994930659316",
+    "note": "Адресная точка Google Maps по поиску Пирогова, 5; подпись карты «1, 5»."
+  },
+  {
+    "id": "chuvsu-m",
+    "name": "Корпус М",
+    "address": "Московский проспект, 45",
+    "latitude": 56.1400146,
+    "longitude": 47.1979397,
+    "google_maps_url": "https://www.google.com/maps?cid=8830332928007708385",
+    "source_url": "https://www.google.com/maps?cid=8830332928007708385",
+    "note": ""
+  },
+  {
+    "id": "chuvsu-n",
+    "name": "Корпус Н",
+    "address": "проспект Ленина, 6",
+    "latitude": 56.1298821,
+    "longitude": 47.2472043,
+    "google_maps_url": "https://www.google.com/maps?cid=31006045651189048",
+    "source_url": "https://www.google.com/maps?cid=31006045651189048",
+    "note": ""
+  },
+  {
+    "id": "chuvsu-o",
+    "name": "Корпус О",
+    "address": "Московский проспект, 19",
+    "latitude": 56.1451821,
+    "longitude": 47.2206638,
+    "google_maps_url": "https://www.google.com/maps?cid=13706567403508196851",
+    "source_url": "https://www.google.com/maps?cid=13706567403508196851",
+    "note": ""
+  },
+  {
+    "id": "chuvsu-p",
+    "name": "Корпус П",
+    "address": "улица Пирогова, 7",
+    "latitude": 56.1392897,
+    "longitude": 47.1982769,
+    "google_maps_url": "https://www.google.com/maps?cid=8970387422408525970",
+    "source_url": "https://www.google.com/maps?cid=8970387422408525970",
+    "note": "Адресная точка Google Maps по поиску Пирогова, 7; подпись карты «6, 7». Буква корпуса взята из официального списка ЧГУ."
+  },
+  {
+    "id": "chuvsu-s",
+    "name": "Корпус С",
+    "address": "улица Пирогова, 3",
+    "latitude": 56.138722,
+    "longitude": 47.199993,
+    "google_maps_url": "https://www.google.com/maps?cid=18302469310839010527",
+    "source_url": "https://www.google.com/maps?cid=18302469310839010527",
+    "note": "На Google Maps организация по этому адресу ошибочно подписана корпусом П; используется официальный адрес корпуса С."
+  },
+  {
+    "id": "chuvsu-t",
+    "name": "Корпус Т",
+    "address": "улица Спиридона Михайлова, 3",
+    "latitude": 56.1435725,
+    "longitude": 47.2149316,
+    "google_maps_url": "https://www.google.com/maps?cid=3710519290041141858",
+    "source_url": "https://www.google.com/maps?cid=3710519290041141858",
+    "note": "Машиностроительный факультет."
+  },
+  {
+    "id": "chuvsu-bp",
+    "name": "Корпус БП",
+    "address": "Московский проспект, 17, строение 1",
+    "latitude": 56.1453277,
+    "longitude": 47.2221982,
+    "google_maps_url": "https://www.google.com/maps?cid=17567888487372733975",
+    "source_url": "https://www.google.com/maps?cid=17567888487372733975",
+    "note": "Бизнес Плаза, 7-й этаж; на Google Maps адрес сокращён до 17."
+  },
+  {
+    "id": "chuvsu-1",
+    "name": "Корпус I (1)",
+    "address": "Университетская улица, 38",
+    "latitude": 56.132361,
+    "longitude": 47.1624806,
+    "google_maps_url": "https://www.google.com/maps?cid=14358376113868626021",
+    "source_url": "https://www.google.com/maps?cid=14358376113868626021",
+    "note": "Точка факультета журналистики в корпусе I."
+  },
+  {
+    "id": "chuvsu-2",
+    "name": "Корпус II (2)",
+    "address": "Университетская улица, 38",
+    "latitude": 56.1321716,
+    "longitude": 47.1610832,
+    "google_maps_url": "https://www.google.com/maps?cid=1291045471890021152",
+    "source_url": "https://www.google.com/maps?cid=1291045471890021152",
+    "note": "Используется общая точка соединённого комплекса на Университетской, 38. Отдельная точка корпуса II не подтверждена."
+  },
+  {
+    "id": "chuvsu-3",
+    "name": "Корпус III (3)",
+    "address": "Университетская улица, 38",
+    "latitude": 56.1315334,
+    "longitude": 47.1614712,
+    "google_maps_url": "https://www.google.com/maps?cid=6721333772925159595",
+    "source_url": "https://www.google.com/maps?cid=6721333772925159595",
+    "note": "Точка научной библиотеки в корпусе III."
+  }
+]

@@ -1,0 +1,15 @@
+.env
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.DS_Store
+*.xlsx
+*.log
+.certificates/
+nginx/https.conf
+backup*.sql
+dist/

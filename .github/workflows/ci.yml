@@ -1,0 +1,22 @@
+name: Test QR-CHUVSU v2
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  integration:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Clean build and start
+        run: docker compose up --build -d --wait
+      - name: Tests with PostgreSQL and live Nginx
+        run: docker compose --profile test run --build --rm tests
+      - name: Python lint
+        run: docker compose --profile test run --rm tests ruff check app tests
+      - name: Logs on failure
+        if: failure()
+        run: docker compose logs --no-color
+      - name: Cleanup
+        if: always()
+        run: docker compose --profile test down -v

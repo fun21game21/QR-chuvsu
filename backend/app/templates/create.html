@@ -1,0 +1,11 @@
+{% extends "base.html" %}{% block title %}Создать занятие · QR-CHUVSU v2{% endblock %}
+{% block content %}<a class="back" href="/">← Главное меню</a><section class="page-heading"><p class="eyebrow">ПРЕПОДАВАТЕЛЮ</p><h1>Новое занятие</h1><p class="muted">Панель останется доступна в этом браузере. Регистрация не нужна.</p></section>
+<form id="create-form" class="card form-card"><div class="form-grid">
+<label>Название занятия<input name="title" placeholder="Например, базы данных" maxlength="160" required></label>
+<label>Группа<input name="group_name" placeholder="Например, ИВТ-21" maxlength="80" required></label>
+<label>Преподаватель<input name="teacher_name" placeholder="ФИО преподавателя" maxlength="160" required autocomplete="name"></label>
+<label>Место проведения занятия<select name="campus_id" required><option value="" disabled selected>Выберите корпус ЧГУ</option>{% for campus in campuses %}<option value="{{ campus.id }}">{{ campus.label }}</option>{% endfor %}</select></label>
+<label>Время для отметки, минут<input name="duration_minutes" type="number" value="30" min="1" max="720" required></label>
+<label>Допустимый радиус, метров<input name="radius" type="number" value="150" min="10" max="5000" required></label>
+</div>
+<button type="submit">Создать QR-сессию →</button><p class="feedback" role="status" aria-live="polite"></p></form>{% endblock %}
