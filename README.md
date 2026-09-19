@@ -1,6 +1,6 @@
-# QR-CHUVSU v2
+# QR-chuvsu
 
-![QR-CHUVSU v2 — создание занятия, отметка студента, журнал](docs/images/overview.svg)
+![QR-chuvsu — создание занятия, отметка студента, журнал](docs/images/overview.svg)
 
 [![Tests](https://github.com/fun21game21/QR-chuvsu/actions/workflows/ci.yml/badge.svg)](https://github.com/fun21game21/QR-chuvsu/actions/workflows/ci.yml)
 ![Python 3.12+](https://img.shields.io/badge/Python-3.12%2B-3776AB)
@@ -12,7 +12,7 @@
 
 Система автоматизированной отметки студентов по QR-коду. Преподаватель создаёт занятие и показывает QR-код. Студент, сканируя QR-код, открывает ссылку с телефона, вводит ФИО и группу и разрешает геолокацию. Отдельное приложение не нужно.
 
-Это учебный проект QR-CHUVSU, представлен и защищён.
+Это учебный проект QR-chuvsu, представлен и защищён.
 
 ## Quick Start
 
