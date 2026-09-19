@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="500" viewBox="0 0 1280 500" role="img" aria-labelledby="title desc">
-  <title id="title">QR-CHUVSU v2</title>
+  <title id="title">QR-chuvsu</title>
   <desc id="desc">Отметка студентов по QR-коду: создание занятия, проверка присутствия и журнал посещаемости.</desc>
   <rect width="1280" height="500" rx="24" fill="#0f2038"/>
   <circle cx="1160" cy="60" r="220" fill="#173658"/>
   <circle cx="1220" cy="30" r="130" fill="#1e4367"/>
   <g font-family="Arial, sans-serif">
     <text x="64" y="78" fill="#79b5fc" font-size="17" letter-spacing="4">PYTHON BACKEND · OPEN SOURCE</text>
-    <text x="64" y="159" fill="#ffffff" font-size="64" font-weight="700">QR-CHUVSU <tspan fill="#79b5fc">v2</tspan></text>
+    <text x="64" y="159" fill="#ffffff" font-size="64" font-weight="700">QR-chuvsu</text>
     <text x="64" y="212" fill="#d0dfef" font-size="27">Система отметки студентов по QR-коду</text>
     <g transform="translate(64 263)">
       <rect width="352" height="121" rx="16" fill="#203a56"/>
